@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;300;500&display=swap');
+* {
+    font-family: 'Exo', sans-serif;
+    margin:0;
+    padding:0;
+}
+body {
+    background: url(../img/cover.jpg) no-repeat center center/cover;
+    width:100%;
+    height:100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255,255,255,0.6);
+    box-shadow: inset 20px 20px 50px #fff, inset -20px -20px 50px #fff;
+}
+.wrap {
+    z-index:2;
+    position: absolute;
+    top:20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrap h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size:3rem;
+    line-height: 2.5rem;
+    margin:0;
+    padding: 0;
+    text-align: center;
+}
+.wrap h1 small {
+    font-weight: 300;
+    font-size:2rem;
+    line-height: 1.5rem;
+}
+.wrap .blue {
+    color:#028339;
+}
+.wrap .input {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.wrap input{
+    width:500px;
+    height:2rem;
+    border: none;
+    background: #028339;
+    opacity: 0.8;
+    outline: none;
+    font-size:1.5rem;
+    color:#fff;
+    text-align: center;
+    transition: all 0.5s;
+    position: relative;
+}
+.wrap input:focus {
+    opacity: 0.9;
+}
+.input-value {
+    position: relative;
+}
+.wrap #enter {
+    position: absolute;
+    right:0;
+    padding:0;
+    top:5px;
+    font-size:1.5rem;
+    color:#fff;
+    padding:0 10px;
+    cursor: pointer;
+}
+.fact {
+    background: rgba(255,255,255,0.6);
+    text-align: center;
+    width: 50%;
+    margin-top:20px;
+    display: none;
+}
+.fact .text {
+    font-weight:300;
+    text-transform: uppercase;
+}
+#close {
+    font-size:1.5rem;
+    color:#028339;
+    padding:0 10px;
+    cursor: pointer;
+}
+@media (max-width:500px){
+    .wrap input{
+        width:400px
+    }
+    .wrap{
+        top:10%
+    }
+    .fact {
+        width:90%
+    }
+    .fact-text {
+        padding: 0 20px 
+    }
+}
